@@ -10,8 +10,8 @@ import { IProjects } from '../../interface/IProjects.interface';
 export class ProjectsComponent {
   public arrayProjects = signal<IProjects[]>([
     {
-      src: '/assets/img/projects/vfull.png',
-      alt: 'Projeto Vida FullStack',
+      src: '/assets/img/projects/jelpooth.png',
+      alt: 'Site institucional da Jelpooth',
       title: 'Vida FullStack',
       width: '100px',
       height: '51px',
