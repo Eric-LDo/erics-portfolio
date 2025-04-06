@@ -1,16 +1,18 @@
 <div class="container">
-    <h2>Conhecimnetos</h2>
-    <ul>
-        
-        @for(item of arrayKnowledge(); track item){<li>
-            <img [src]="item.src"
-                 [alt]="item.alt"
-                 [title]="item.title"
-                 aria-label="item.alt"
-                 loading="lazy"
-                 width="22px"
-                 height="24px"
-            >
-        </li>}    </ul>
-
+  <h2>Conhecimnetos</h2>
+  <ul>
+    @for(item of arrayKnowledge(); track item){
+        <li>
+            <img
+                [src]="item.src"
+                [alt]="item.alt"
+                [title]="item.title"
+                aria-label="item.alt"
+                loading="lazy"
+                width="22px"
+                height="24px"
+            />
+        </li>
+    }
+  </ul>
 </div>
