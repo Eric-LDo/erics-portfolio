@@ -7,7 +7,7 @@
     "build": "rimraf ./angular/cache && ng build && ng run erics-portfolio:server",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:EricsPortfolio": "node dist/erics-portfolio/server/main.js"
+    "serve:ssr:erics-portfolio": "node dist/erics-portfolio/server/main.js"
   },
   "private": true,
   "dependencies": {
