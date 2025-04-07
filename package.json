@@ -4,10 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "rimraf ./angular/cache && ng serve --watch",
-    "build": "rimraf ./angular/cache && ng build",
+    "build": "rimraf ./angular/cache && ng build && ng run erics-portfolio:server",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:EricsPortfolio": "node dist/erics-portfolio/server/server.mjs"
+    "serve:ssr:EricsPortfolio": "node dist/erics-portfolio/server/main.js"
   },
   "private": true,
   "dependencies": {
@@ -21,7 +21,7 @@
     "@angular/platform-browser-dynamic": "^19.2.0",
     "@angular/platform-server": "^19.2.0",
     "@angular/router": "^19.2.0",
-    "@angular/ssr": "^19.2.0",
+    "@angular/ssr": "^19.2.6",
     "erics-portfolio": "file:",
     "express": "^4.18.2",
     "rimraf": "^6.0.1",
