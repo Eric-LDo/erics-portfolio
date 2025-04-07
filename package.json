@@ -1,10 +1,10 @@
 {
-  "name": "erics-portfolio",
+  "name": "ericsportfolio",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "rimraf ./angular/cache && ng serve --watch",
-    "build": "ng build",
+    "build": "rimraf ./angular/cache && ng build && ng run EricsPortfolio:server",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:erics-portfolio": "node dist/erics-portfolio/server/server.mjs"
@@ -21,8 +21,9 @@
     "@angular/platform-browser-dynamic": "^19.2.0",
     "@angular/platform-server": "^19.2.0",
     "@angular/router": "^19.2.0",
-    "@angular/ssr": "^19.2.0",
-    "erics-portfolio": "file:",
+    "@angular/ssr": "^19.2.6",
+    "ericsportfolio": "file:",
+    "EricsPortfolio": "file:",
     "express": "^4.18.2",
     "rimraf": "^6.0.1",
     "rxjs": "~7.8.0",
@@ -33,6 +34,7 @@
     "@angular-devkit/build-angular": "^19.2.0",
     "@angular/cli": "^19.2.0",
     "@angular/compiler-cli": "^19.2.0",
+    "@netlify/angular-runtime": "^2.3.1",
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
