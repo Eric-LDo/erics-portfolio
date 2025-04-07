@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "EricsPortfolio": {
+    "erics-portfolio": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -70,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "EricsPortfolio:build:production"
+              "buildTarget": "erics-portfolio:build:production"
             },
             "development": {
-              "buildTarget": "EricsPortfolio:build:development"
+              "buildTarget": "erics-portfolio:build:development"
             }
           },
           "defaultConfiguration": "development"

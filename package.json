@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:EricsPortfolio": "node dist/erics-portfolio/server/server.mjs"
+    "serve:ssr:erics-portfolio": "node dist/erics-portfolio/server/server.mjs"
   },
   "private": true,
   "dependencies": {
