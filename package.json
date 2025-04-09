@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "prebuild": "rimraf ./dist",
+    "prebuild": "rimraf ./dist && npm prune",
     "start": "rimraf ./angular/cache && ng serve --watch",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
@@ -23,12 +23,8 @@
     "@angular/platform-server": "^19.2.0",
     "@angular/router": "^19.2.0",
     "@angular/ssr": "^19.2.6",
-    "erics-portfolio": "file:",
-    "ericsportfolio": "file:",
-    "express": "^4.18.2",
     "rimraf": "^6.0.1",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
