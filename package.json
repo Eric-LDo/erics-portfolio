@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "rimraf ./angular/cache && ng serve --watch",
-    "build": "rimraf ./angular/cache && ng build && ng run erics-portfolio:server",
+    "build": "ng build--prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:erics-portfolio": "node dist/erics-portfolio/server/server.mjs"
