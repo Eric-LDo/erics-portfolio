@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "prebuild": "rimraf ./dist",
     "start": "rimraf ./angular/cache && ng serve --watch",
-    "build": "ng build --prod",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:erics-portfolio": "node dist/erics-portfolio/server/server.mjs"
