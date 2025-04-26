@@ -44,6 +44,20 @@ export class ProjectsComponent {
           href: 'https://homeworkflow.netlify.app'
         },
       ]
+    },
+    {
+      src: '/assets/img/projects/task_flow.svg',
+      alt: 'Projeto Task Flow',
+      title: 'Task Flow',
+      width: '100px',
+      height: '51px',
+      description:'<p>Desafio de fazer um kanban, para organização de tarefas</p>',
+      links: [
+        {
+          name: 'Conheça o nosso site',
+          href: 'https://taskflowvalinor.netlify.app'
+        },
+      ]
     }
   ])
   public openDialog(data: IProjects){
