@@ -30,35 +30,8 @@ export class ProjectsComponent {
           href: 'https://jelpooth.netlify.app'
         },
       ]
-    },
-    {
-      src: '/assets/img/projects/jelpooth.png',
-      alt: 'Projeto Home Work Flow',
-      title: 'Home Work Flow',
-      width: '100px',
-      height: '51px',
-      description:'<p>Ajusda para quem tem dificuldade de aprender usando analise de dados (em desenvolvimento)</p>',
-      links: [
-        {
-          name: 'Conheça o nosso site',
-          href: 'https://homeworkflow.netlify.app'
-        },
-      ]
-    },
-    {
-      src: '/assets/img/projects/task_flow.svg',
-      alt: 'Projeto Task Flow',
-      title: 'Task Flow',
-      width: '100px',
-      height: '51px',
-      description:'<p>Desafio de fazer um kanban, para organização de tarefas</p>',
-      links: [
-        {
-          name: 'Conheça o nosso site',
-          href: 'https://taskflowvalinor.netlify.app'
-        },
-      ]
     }
+    
   ])
   public openDialog(data: IProjects){
     this.#dialog.open(DialogProjectsComponent, {
