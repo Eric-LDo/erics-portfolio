@@ -1,33 +1,126 @@
-/* You can add global styles to this file, and also import other style files */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
 
 html,
 body {
-    height: 100%;
+    min-height: 100%;
 }
 
 body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--grey);
     background-color: var(--black);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
-h1,h2,h3{
-    font-size:22;
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
 }
-h1,h2,h3,a{
-    color: var(--white)
+
+h1, h2, h3, a {
+    color: var(--white);
 }
-p{
+
+p {
     color: var(--grey);
     font-size: 16px;
-    margin:10px 0;
+    margin: 10px 0;
 }
+
 ul {
     list-style: none;
     padding: 0;
-    margin:0;
+    margin: 0;
 }
-a{
+
+a {
     text-decoration: none;
 }
 
+img {
+    max-width: 100%;
+}
+
+::selection {
+    background: var(--primary);
+    color: var(--white);
+}
+
+:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+.section-title {
+    margin: 0 0 32px;
+    font-size: clamp(26px, 4vw, 34px);
+    text-align: center;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 48px;
+        height: 4px;
+        margin: 12px auto 0;
+        border-radius: 999px;
+        background: var(--gradient);
+    }
+}
+
+.reveal {
+    animation: fade-up 700ms var(--ease) both;
+}
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Dialog (Angular Material) */
+.dialog-container-projects {
+    --mdc-dialog-container-color: var(--black-010);
+    --mdc-dialog-container-shape: var(--radius);
+    --mat-dialog-container-max-width: min(640px, calc(100vw - 32px));
+
+    .mat-mdc-dialog-surface {
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+    }
+}
+
+.cdk-overlay-dark-backdrop {
+    background: rgba(5, 5, 10, 0.7);
+    backdrop-filter: blur(6px);
+}

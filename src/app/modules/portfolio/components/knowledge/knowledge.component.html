@@ -1,18 +1,17 @@
-<div class="container">
-  <h2>Conhecimnetos</h2>
+<section class="container reveal">
+  <h2 class="section-title">Conhecimentos</h2>
   <ul>
-    @for(item of arrayKnowledge(); track item){
-        <li>
+    @for(item of arrayKnowledge(); track item.title){
+        <li [title]="item.title">
             <img
                 [src]="item.src"
                 [alt]="item.alt"
-                [title]="item.title"
-                aria-label="item.alt"
                 loading="lazy"
-                width="22px"
-                height="24px"
+                width="28"
+                height="28"
             />
+            <span>{{ item.title }}</span>
         </li>
     }
   </ul>
-</div>
+</section>

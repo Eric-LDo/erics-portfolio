@@ -1,17 +1,30 @@
-<app-header></app-header>
+<nav class="topbar" aria-label="Navegação principal">
+    <div class="container topbar__inner">
+        <a href="#inicio" class="topbar__brand">Eric<span>.</span></a>
+        <ul class="topbar__links">
+            <li><a href="#conhecimentos">Conhecimentos</a></li>
+            <li><a href="#experiencias">Experiências</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </div>
+</nav>
+<app-header id="inicio"></app-header>
 <main>
-    <app-knowledge></app-knowledge>
-    <app-experiences></app-experiences>
-    @defer(on viewport){
-        <app-projects></app-projects>
-    } @placeholder {
-        <section>
-            <h2>Carregando todos os pojetos desenvolvidos...</h2>
-        </section>
-    }@error {
-        <section>
-            <h2>Ocorreu um error com o carregamento dos projetos...</h2>
-        </section>
-    }
+    <app-knowledge id="conhecimentos"></app-knowledge>
+    <app-experiences id="experiencias"></app-experiences>
+    <section id="projetos" class="projects-slot">
+        @defer(on viewport){
+            <app-projects></app-projects>
+        } @placeholder {
+            <h2 class="state">Carregando todos os projetos desenvolvidos...</h2>
+        } @error {
+            <h2 class="state">Ocorreu um erro com o carregamento dos projetos...</h2>
+        }
+    </section>
 </main>
-
+<footer class="footer">
+    <div class="container">
+        <p>&copy; {{ year }} Eric Luis Domingues</p>
+    </div>
+</footer>

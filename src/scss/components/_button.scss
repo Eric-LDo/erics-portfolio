@@ -1,29 +1,48 @@
-.btn{
-    display: flex;
+.btn {
+    display: inline-flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
-    transition: 0.5;
-    cursor:pointer;
+    gap: 8px;
+    padding: 12px 22px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: transform 250ms var(--ease), box-shadow 250ms var(--ease),
+        background 250ms var(--ease), border-color 250ms var(--ease);
 
-    &.btn-primary,
-    &.btn-secondary{
-        padding:10px;
-        font-size: 16px;
-        border-radius: 7px;
+    &:hover {
+        transform: translateY(-2px);
     }
-    &.btn-primary{
-        color: var(--black-010);
-        background: var(--primary);
-        &:hover{
-            background: var(--primary-010);
-            color:var(--white)
+
+    &.btn-primary {
+        color: var(--white);
+        background: var(--gradient);
+        box-shadow: 0 8px 24px -8px rgba(49, 124, 237, 0.6);
+
+        &:hover {
+            box-shadow: 0 12px 30px -8px rgba(139, 92, 246, 0.7);
         }
     }
-    &.btn-secondary{
+
+    &.btn-ghost {
+        color: var(--white);
+        background: var(--surface);
+        border-color: var(--border);
+
+        &:hover {
+            background: var(--surface-hover);
+            border-color: var(--border-hover);
+        }
+    }
+
+    &.btn-secondary {
         color: var(--white);
         background: var(--secondary);
-        &:hover{
+
+        &:hover {
             background: var(--secondary-010);
         }
     }

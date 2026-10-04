@@ -1,15 +1,21 @@
-<div class="container">
-  <h2>Ultimas Experiencias</h2>
-  @for(item of arrayExperiences(); track item){
-    <details>
-        <summary>
-        <p>
-            <strong> {{item.summary.strong}} </strong>
-            <br/>
-            {{item.summary.p}}
-        </p>
-        </summary>
-        <article [innerHTML]="item.text"></article>
-    </details>
-  }
-</div>
+<section class="container reveal">
+  <h2 class="section-title">Últimas Experiências</h2>
+  <ol class="timeline">
+    @for(item of arrayExperiences(); track item; let first = $first){
+      <li>
+        <details [open]="first">
+          <summary>
+            <span class="timeline__head">
+              <strong>{{ item.summary.strong }}</strong>
+              <span>{{ item.summary.p }}</span>
+            </span>
+            <svg class="timeline__chevron" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path fill="currentColor" d="M12 15.4 6.6 10 8 8.6l4 4 4-4 1.4 1.4-5.4 5.4Z"/>
+            </svg>
+          </summary>
+          <article [innerHTML]="item.text"></article>
+        </details>
+      </li>
+    }
+  </ol>
+</section>

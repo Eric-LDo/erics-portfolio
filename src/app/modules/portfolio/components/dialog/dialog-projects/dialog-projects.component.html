@@ -1,16 +1,18 @@
 <header>
-    <h2 mat-dialog-title>{{getData()?.title }}</h2>
-    <button (click)="closeModal()">
-        <img src="/assets/icons/dialog/close.svg" alt="">
+    <h2 mat-dialog-title>{{ getData()?.title }}</h2>
+    <button type="button" class="close" (click)="closeModal()" aria-label="Fechar">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path fill="currentColor" d="M6.4 19 5 17.6l5.6-5.6L5 6.4 6.4 5l5.6 5.6L17.6 5 19 6.4 13.4 12l5.6 5.6-1.4 1.4-5.6-5.6L6.4 19Z"/>
+        </svg>
     </button>
 </header>
 <mat-dialog-content>
     <h3>Descrição</h3>
     <article [innerHTML]="getData()?.description"></article>
     <nav>
-        @for(item of getData()?.links; track item){
-            <a [href]="item.href" target="_blank" class="btn btn-primary">
-                {{item.name}}
+        @for(item of getData()?.links; track item.href){
+            <a [href]="item.href" target="_blank" rel="noopener" class="btn btn-primary">
+                {{ item.name }}
             </a>
         }
     </nav>
